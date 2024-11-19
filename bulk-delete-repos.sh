@@ -13,7 +13,7 @@ if [ -z "$2" ]; then
 fi
 
 ORG=$1
-REGEX_PATTERN=$1
+REGEX_PATTERN=$2
 
 repos=$(gh repo list $ORG --json nameWithOwner | jq -r '.[].nameWithOwner')
 echo "Found repositories matching the pattern '$REGEX_PATTERN':"

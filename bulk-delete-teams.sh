@@ -15,7 +15,7 @@ fi
 ORG=$1
 REGEX_PATTERN=$2
 
-list teams in org
+# list teams in org
 teams=$(gh api orgs/$ORG/teams --jq '.[].slug')
 echo "Found teams matching the pattern '$REGEX_PATTERN':"
 for team in $teams; do
